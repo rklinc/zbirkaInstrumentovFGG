@@ -173,7 +173,8 @@
         <script>
             var url = window.location.href;
             var n = url.length;
-            var id = url.slice(51, n);
+            var start = url.indexOf("st=");
+            var id = url.slice(start + 3, n);
             document.getElementById('slika').src = "img/instrument_" + id + ".png";
             var data = '{ "instrumenti" : [' +
             '{ "id":"44" , "vrsta":"sekstant", "proizvajalec":"Josh Semalvico London" , "model":"/", "mere":"1,35; 31/12/25", "leto":"1890", "naslov": "Postavitev instrumenta", "tab":["ob neuporabi je na treh nogicah", "ročaj, pri meritvah se ga drži v roki"], "premer": "nezaščiten, del kroga z razdelbo od 0° do 140°", "vrstaRazdelbe": "vgravirana razdelba", "nosilec": "posrebreni kovinski nosilec", "razdelba": "seksagezimalna", "enota" : "15\'", "stMest": "1", "izvedba" : "nonij", "nonij": "60", "interval" : "15\'\'", "premerObjektiva": "16 mm", "povecava": "/", "tip": "ramsdenov izvlječljiv okular", "kriz": "dve horizontalni niti, ki se sekata z dvema vertikalnima nitima, viziramo pravokotnik v sredini", "stanje": "popolnoma restavriran, poliran in lakiran; jan. 2017" }, ' +

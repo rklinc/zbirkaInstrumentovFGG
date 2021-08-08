@@ -208,7 +208,8 @@
         <script>
             var url = window.location.href;
             var n = url.length;
-            var id = url.slice(52, n);
+            var start = url.indexOf("st=");
+            var id = url.slice(start + 3, n);
             document.getElementById('slika').src = "img/instrument_" + id + ".png";
             var data = '{ "instrumenti" : [' +
             '{ "id":"37" , "vrsta":"avtoredukcijski tahimeter", "proizvajalec":"Carl Zeiss Jena" , "model":"Redta 002", "mere":"6,60; 30/18/30", "leto":"1951", "naslov":"Centriranje in horizontiranje instrumenta", "tab":["navadno grezilo", "dozna libela", "cevna libela na alhidadi", "koincidenčna libela za vertikalni krog"], "premer1":"zaščiten, 114 mm", "premer2":"zaščiten, 74 mm", "vrstaRazdelbe1":"vgravirana razdelba", "vrstaRazdelbe2":"vgravirana razdelba", "nosilec1":"stekleni nosilec", "nosilec2":"stekleni nosilec", "razdelba1":"seksagezimalna", "razdelba2":"seksagezimalna", "enota1":"1°", "enota2":"1°", "stMest1":"1", "stMest2":"1", "izvedba1":"optični mikrometer", "izvedba2":"optični mikrometer", "nonij1":"60", "nonij2":"60", "interval1":"1\', cenjenje 6\'\'", "interval2":"1\', cenjenje 6\'\'", "repeticija1":"mahlerjeva membrana", "repeticija2":"/", "princip":"optični razdaljemer z dvojno sliko – paralaktični trikotnik s spremenljivim kotom in bazo na horizontalni lati na cilju", "natancnost":"2 cm na 100 m", "premerObjektiva":"42 mm", "povecava":"25 x", "tip":"daljnogled z notranjim fokusiranjem", "kriz":"osnovna horizontalna in vertikalna nit, distančni niti, konstanta 100, dodatni vertikalni niti za merjenje s posebno horizontalno lato", "stanje": "Instrument je v stanju, kot je bil ob prenehanju njegove uporabe." }, ' +

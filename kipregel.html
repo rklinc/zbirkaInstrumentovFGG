@@ -173,7 +173,8 @@
         <script>
             var url = window.location.href;
             var n = url.length;
-            var id = url.slice(51, n);
+            var start = url.indexOf("st=");
+            var id = url.slice(start + 3, n);
             document.getElementById('slika').src = "img/instrument_" + id + ".png";
             var data = '{ "instrumenti" : [' +
             '{ "id":"24" , "vrsta":"topografska garnitura ali kipregel", "proizvajalec":"Gebrüder Fromme" , "model":"/", "mere":"1,82; 43/11/20", "leto":"1890", "naslov": "Postavitev instrumenta", "tab":["na mersko mizo (že horizontirano)", "cevna libela in elevacijski vijak", "Centriranje na točko"], "premer": "/", "vrstaRazdelbe": "/", "nosilec": "/", "razdelba": "/", "enota" : "/", "stMest": "/", "izvedba" : "/", "nonij": "/", "interval" : "/", "premerObjektiva": "27 mm", "povecava": "/", "tip": "ramsdenov izvlječljiv okular", "kriz": "reichenbachov nitni križ", "stanje": "poliran, delno lakiran dec. 2016" }, ' +
